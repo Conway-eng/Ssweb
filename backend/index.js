@@ -16,7 +16,9 @@ app.get('/api/health', (req, res) => {
 // Auth routes
 app.use('/api/auth', require('./routes/auth'));
 
-// Connect to MongoDB, then start the server
+// Complaint routes
+app.use('/api/complaints', require('./routes/complaint'));
+
 const PORT = process.env.PORT || 5000;
 
 connectDB().then(() => {
